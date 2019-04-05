@@ -52,45 +52,9 @@ public class GxlReader {
 				}				
 				GraphAnalyzer.graphsArray[i] = new Graphs(name, points, edges); 			
 			}
-
-//			List<GXLNode> nodeList = new ArrayList<GXLNode>();
-//			List<GXLEdge> edgeList = new ArrayList<GXLEdge>();
-//			
-//			nodeList.clear();
-//			edgeList.clear();
-//					
-//			GXLGraph graph = gxlDocument.getDocumentElement().getGraphAt(0);
-//			int numberElement = graph.getChildCount();
-//			
-//			for (int i=0;i<numberElement;i++) {
-//
-//				if (graph.getChildAt(i).getClass() == GXLNode.class) {
-//					GXLNode node = (GXLNode) graph.getChildAt(i);
-//					nodeList.add(node);
-//				} else if (graph.getChildAt(i).getClass() == GXLEdge.class) {
-//					GXLEdge edge = (GXLEdge) graph.getChildAt(i);
-//					edgeList.add(edge);
-//				}
-//				
-//			}
-//		
-//			for(int i = 0; i < nodeList.size(); i++) {
-//				System.out.println(nodeList.get(i).getID());
-//			}
-//			
-//			for(int i = 0; i < edgeList.size(); i++) {
-//				System.out.println(edgeList.get(i).getSourceID()+" "+edgeList.get(i).getTargetID());
-//			}	
-//			
-//			System.out.println(GraphAnalyzer.graphsArray[0].getName());
-//			System.out.println(GraphAnalyzer.graphsArray[0].getPoint(3));
-			
 		} catch (IOException | SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
+		}	
 	}
 	
 }

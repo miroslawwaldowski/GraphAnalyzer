@@ -4,8 +4,6 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.util.ArrayList;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -72,13 +70,13 @@ public class MainWindow extends JFrame{
 				}else {
 					Analyzer.analyzeGraphs();
 					for (int i =0; i<GraphAnalyzer.graphsFrequency.length; i++) {
-						setComunicate("\nczêstotliwoœci grafu "+GraphAnalyzer.graphsArray[i].getName()+":");
+						setComunicate("czêstotliwoœci grafu "+GraphAnalyzer.graphsArray[i].getName()+":");
 						for (int k=0; k < GraphAnalyzer.graphsFrequency[i].getListofLists().size();k++) {
 							String text = GraphAnalyzer.graphsFrequency[i].getList(k).toString();
 							int nr = k+1;
 							setComunicate("- czêstotliwoœæ nr "+nr+" - "+text);
 						}
-						setComunicate("suma czêstotliwoœci = "+GraphAnalyzer.graphsFrequency[i].getListofLists().size());
+						setComunicate("suma czêstotliwoœci = "+GraphAnalyzer.graphsFrequency[i].getListofLists().size()+"\n");
 					}
 					
 				}
@@ -100,12 +98,12 @@ public class MainWindow extends JFrame{
 			    
 			    }
 			    
-			    setComunicate("Iloœæ wczytanych grafów: "+GraphAnalyzer.graphsArray.length);
+			    setComunicate("Iloœæ wczytanych grafów: "+GraphAnalyzer.graphsArray.length+"\n");
 			    for (int i=0;i<GraphAnalyzer.graphsArray.length;i++) {
 					String text = "Graf nr "+(i+1)+":\n- nazwa: "
 					+GraphAnalyzer.graphsArray[i].getName()+"\n- iloœæ wierzcho³ków: "
 					+GraphAnalyzer.graphsArray[i].getPoints().length+"\n- iloœæ krawêdzi: "
-					+GraphAnalyzer.graphsArray[i].getEdges()[0].length;
+					+GraphAnalyzer.graphsArray[i].getEdges()[0].length+"\n";
 					setComunicate(text);
 			    	
 				}
